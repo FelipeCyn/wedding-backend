@@ -5,9 +5,13 @@ export class Group {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   groupName?: string;
 
-  @Column()
-  weddingId?: string;
+  @Column({
+    nullable: true,
+  })
+  weddingId?: number;
 }

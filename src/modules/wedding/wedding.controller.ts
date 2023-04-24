@@ -24,6 +24,11 @@ export class WeddingController {
     return this.weddingService.findOne(id);
   }
 
+  @Get("weddingByUser/:id")
+  findWeddingByUser(@Param("id") id: number) {
+    return this.weddingService.findOneByUser(id);
+  }
+
   @Post()
   create(@Body() CreateWeddingDto: CreateWeddingDto) {
     return this.weddingService.create(CreateWeddingDto);

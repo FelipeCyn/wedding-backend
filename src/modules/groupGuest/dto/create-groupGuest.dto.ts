@@ -1,9 +1,11 @@
-import { IsString } from "class-validator";
+import { IsNumber, IsOptional } from "class-validator";
 
 export class CreateGroupGuestDto {
-  @IsString()
-  readonly guestId?: string;
+  @IsNumber()
+  @IsOptional()
+  readonly guestId?: number;
 
-  @IsString()
-  readonly groupId?: string;
+  @IsNumber()
+  @IsOptional()
+  readonly groupId?: number;
 }

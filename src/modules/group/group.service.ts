@@ -16,6 +16,10 @@ export class GroupService {
     return this.groupRepository.find();
   }
 
+  findAllByWeddingId(weddingId) {
+    return this.groupRepository.find({ weddingId });
+  }
+
   async findOne(id: number) {
     const message = await this.groupRepository.findOne(id);
     if (!message) {

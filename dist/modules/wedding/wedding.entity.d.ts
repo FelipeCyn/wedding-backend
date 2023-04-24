@@ -1,7 +1,7 @@
 export declare class Wedding {
     id: number;
     date?: Date;
-    time?: number;
+    time?: Date;
     address?: string;
     mealResponses?: boolean;
     userId?: number;

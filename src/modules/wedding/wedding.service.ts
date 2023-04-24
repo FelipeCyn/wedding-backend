@@ -24,6 +24,14 @@ export class WeddingService {
     return message;
   }
 
+  async findOneByUser(userId: number) {
+    const message = await this.weddingRepository.findOne({ userId });
+    if (!message) {
+      throw new NotFoundException(`message #${userId} not found`);
+    }
+    return message;
+  }
+
   create(createWeddingDto: CreateWeddingDto) {
     const message = this.weddingRepository.create(createWeddingDto);
     return this.weddingRepository.save(message);

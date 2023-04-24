@@ -1,24 +1,33 @@
-import { IsString, IsEmail, IsNumber, IsBoolean } from "class-validator";
+import {
+  IsString,
+  IsEmail,
+  IsNumber,
+  IsBoolean,
+  IsOptional,
+} from "class-validator";
 
 export class CreateGuestDto {
   @IsString()
-  readonly firstName?: string;
+  @IsOptional()
+  readonly name?: string;
 
   @IsString()
-  readonly lastName?: string;
-
-  @IsNumber()
+  @IsOptional()
   readonly phoneNumber?: string;
 
   @IsBoolean()
+  @IsOptional()
   readonly rsvp?: boolean;
 
   @IsNumber()
+  @IsOptional()
   readonly guests?: number;
 
-  @IsString()
-  readonly weddingId?: string;
+  @IsNumber()
+  @IsOptional()
+  readonly weddingId?: number;
 
   @IsString()
+  @IsOptional()
   readonly mealOptionId?: string;
 }

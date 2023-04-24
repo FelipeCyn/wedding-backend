@@ -16,6 +16,10 @@ export class GuestService {
     return this.guestRepository.find();
   }
 
+  findAllByWeddingId(weddingId) {
+    return this.guestRepository.find({ weddingId });
+  }
+
   async findOne(id: number) {
     const message = await this.guestRepository.findOne(id);
     if (!message) {

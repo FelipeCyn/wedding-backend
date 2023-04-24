@@ -5,24 +5,33 @@ export class Guest {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  firstName?: string;
+  @Column({
+    nullable: true,
+  })
+  name?: string;
 
-  @Column()
-  lastName?: string;
-
-  @Column()
+  @Column({
+    nullable: true,
+  })
   phoneNumber?: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   rsvp?: boolean;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   guests?: number;
 
-  @Column()
-  weddingId?: string;
+  @Column({
+    nullable: true,
+  })
+  weddingId?: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   mealOptionId?: string;
 }

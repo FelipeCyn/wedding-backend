@@ -19,6 +19,11 @@ export class GuestController {
     return this.guestService.findAll();
   }
 
+  @Get("byWeddingId/:id")
+  findAllByWeddingId(@Param("id") id: number) {
+    return this.guestService.findAllByWeddingId(id);
+  }
+
   @Get(":id")
   findOne(@Param("id") id: number) {
     return this.guestService.findOne(id);

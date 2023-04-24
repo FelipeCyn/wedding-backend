@@ -19,6 +19,7 @@ import { Role } from "./enums/role.enum";
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
+  @UseGuards(JwtAuthenticationGuard)
   @Get()
   findAll() {
     return this.usersService.findAll();

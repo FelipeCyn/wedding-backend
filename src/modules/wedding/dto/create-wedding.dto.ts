@@ -4,18 +4,23 @@ import {
   IsNumber,
   IsDate,
   IsBoolean,
+  IsOptional,
 } from "class-validator";
 
 export class CreateWeddingDto {
-  @IsDate()
-  readonly date?: Date;
+  @IsString()
+  @IsOptional()
+  readonly date?: string;
 
   @IsNumber()
-  readonly time?: number;
+  @IsOptional()
+  readonly time?: string;
 
   @IsString()
+  @IsOptional()
   readonly address: string;
 
+  @IsOptional()
   @IsBoolean()
   readonly mealResponses?: boolean;
 
@@ -23,11 +28,14 @@ export class CreateWeddingDto {
   readonly userId?: number;
 
   @IsBoolean()
+  @IsOptional()
   readonly rsvps?: boolean;
 
   @IsBoolean()
+  @IsOptional()
   readonly trial?: boolean;
 
   @IsString()
+  @IsOptional()
   readonly status?: string;
 }

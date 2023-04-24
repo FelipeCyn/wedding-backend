@@ -5,15 +5,23 @@ export class MealOption {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   name?: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   number?: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   counter?: number;
 
-  @Column()
-  weddingId?: string;
+  @Column({
+    nullable: true,
+  })
+  weddingId?: number;
 }

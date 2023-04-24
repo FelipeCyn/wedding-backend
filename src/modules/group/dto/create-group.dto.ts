@@ -1,9 +1,9 @@
-import { IsString } from "class-validator";
+import { IsNumber, IsString } from "class-validator";
 
 export class CreateGroupDto {
   @IsString()
   readonly groupName?: string;
 
-  @IsString()
-  readonly weddingId?: string;
+  @IsNumber()
+  readonly weddingId?: number;
 }

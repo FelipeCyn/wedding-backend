@@ -5,27 +5,43 @@ export class Wedding {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  date?: Date;
+  @Column({
+    nullable: true,
+  })
+  date?: string;
 
-  @Column()
-  time?: Date;
+  @Column({
+    nullable: true,
+  })
+  time?: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   address?: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   mealResponses?: boolean;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   userId?: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   rsvps?: boolean;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   trial?: boolean;
 
-  @Column()
-  status?: boolean;
+  @Column({
+    nullable: true,
+  })
+  status?: string;
 }

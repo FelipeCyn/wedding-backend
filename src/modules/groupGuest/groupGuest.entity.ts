@@ -5,9 +5,13 @@ export class GroupGuest {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  guestId?: string;
+  @Column({
+    nullable: true,
+  })
+  guestId?: number;
 
-  @Column()
-  groupId?: string;
+  @Column({
+    nullable: true,
+  })
+  groupId?: number;
 }
